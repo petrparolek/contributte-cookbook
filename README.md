@@ -30,22 +30,22 @@ Related blogposts:
 
 ### NEON
 
-```yaml
+```neon
 services:
-  facebookAuthorizator: 
-    class: App\Model\Security\FacebookAuthorizators(@redisCache)
-    
-  redisCache: Predis\PredisClient
+	facebookAuthorizator:
+		class: App\Model\Security\FacebookAuthorizators(@redisCache)
+
+	redisCache: Predis\PredisClient
 ```
 
 ### PHP
 
 ```php
 $builder->addDefinition('facebookAuthorizator')
-    ->setClass('App\Model\Security\FacebookAuthorizators(@redisCache)');
+	->setClass('App\Model\Security\FacebookAuthorizators(@redisCache)');
 
 $builder->addDefinition('redisCache')
-    ->setClass('Predis\PredisClient');
+	->setClass('Predis\PredisClient');
 ```
 
 ## Roadmap
